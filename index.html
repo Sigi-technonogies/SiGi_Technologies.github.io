@@ -3,10 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Open Domotics - SiGi Technologies</title>
+    <title>SiGi Technologies - Open Source Innovation</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        /* Copio tutti gli stili CSS qui per mantenere consistenza */
         * {
             margin: 0;
             padding: 0;
@@ -134,6 +133,216 @@
             box-shadow: var(--glow-pink);
         }
 
+        /* Hero Section */
+        .hero {
+            padding: 5rem 5% 3rem;
+            text-align: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1.5rem;
+            background: linear-gradient(to right, var(--accent-electric), var(--text-light));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            line-height: 1.2;
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            color: var(--text-gray);
+            max-width: 800px;
+            margin: 0 auto 2.5rem;
+            line-height: 1.6;
+        }
+
+        .cta-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .btn {
+            padding: 0.9rem 2rem;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .btn-primary {
+            background-color: var(--accent-electric);
+            color: var(--primary-dark);
+            border: 2px solid var(--accent-electric);
+        }
+
+        .btn-primary:hover {
+            background-color: transparent;
+            color: var(--accent-electric);
+            box-shadow: var(--glow-blue);
+        }
+
+        .btn-secondary {
+            background-color: transparent;
+            color: var(--accent-electric);
+            border: 2px solid var(--accent-electric);
+        }
+
+        .btn-secondary:hover {
+            background-color: var(--accent-electric);
+            color: var(--primary-dark);
+            box-shadow: var(--glow-blue);
+        }
+
+        /* Projects Section */
+        .projects {
+            padding: 4rem 5%;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 3rem;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            width: 100px;
+            height: 4px;
+            background: linear-gradient(90deg, transparent, var(--accent-electric), transparent);
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2.5rem;
+        }
+
+        .project-card {
+            background-color: var(--card-bg);
+            border-radius: 12px;
+            padding: 2.5rem 2rem;
+            text-align: center;
+            border: 1px solid rgba(0, 247, 255, 0.1);
+            transition: all 0.4s ease;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+            text-decoration: none;
+            display: block;
+            color: inherit;
+        }
+
+        .project-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--glow-blue);
+            border-color: var(--accent-electric);
+        }
+
+        .project-card.ai-card {
+            border-color: rgba(255, 0, 212, 0.1);
+        }
+
+        .project-card.ai-card:hover {
+            box-shadow: var(--glow-pink);
+            border-color: var(--accent-ai);
+        }
+
+        .project-icon {
+            font-size: 3.5rem;
+            color: var(--accent-electric);
+            margin-bottom: 1.5rem;
+        }
+
+        .ai-card .project-icon {
+            color: var(--accent-ai);
+        }
+
+        .project-title {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            color: var(--text-light);
+        }
+
+        .project-desc {
+            color: var(--text-gray);
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+        }
+
+        /* Company info */
+        .company-info {
+            padding: 4rem 5%;
+            background-color: var(--secondary-dark);
+            border-top: 1px solid rgba(0, 247, 255, 0.1);
+            border-bottom: 1px solid rgba(0, 247, 255, 0.1);
+            text-align: center;
+        }
+
+        .company-info p {
+            max-width: 800px;
+            margin: 0 auto 2rem;
+            font-size: 1.2rem;
+            line-height: 1.7;
+            color: var(--text-gray);
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .social-link {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--accent-electric);
+            text-decoration: none;
+            font-size: 1.1rem;
+            padding: 0.8rem 1.5rem;
+            border-radius: 50px;
+            border: 1px solid rgba(0, 247, 255, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        .social-link:hover {
+            background-color: rgba(0, 247, 255, 0.1);
+            box-shadow: var(--glow-blue);
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 2rem 5%;
+            color: var(--text-gray);
+            font-size: 0.9rem;
+            border-top: 1px solid rgba(0, 247, 255, 0.1);
+        }
+
+        .footer-logo {
+            color: var(--accent-electric);
+            font-weight: 700;
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+        }
+
         /* Project Page Styles */
         .project-page {
             display: flex;
@@ -152,7 +361,6 @@
         .project-logo {
             font-size: 4rem;
             margin-bottom: 1.5rem;
-            color: var(--accent-electric);
         }
 
         .project-name {
@@ -162,6 +370,12 @@
             -webkit-background-clip: text;
             background-clip: text;
             color: transparent;
+        }
+
+        .ai-project .project-name {
+            background: linear-gradient(to right, var(--accent-ai), var(--accent-electric));
+            -webkit-background-clip: text;
+            background-clip: text;
         }
 
         .coming-soon-text {
@@ -174,6 +388,13 @@
             margin-bottom: 3rem;
             text-shadow: 0 0 20px rgba(0, 247, 255, 0.5);
             animation: pulse 2s infinite;
+        }
+
+        .ai-coming-soon {
+            background: linear-gradient(to right, var(--accent-ai), var(--accent-ai-light));
+            -webkit-background-clip: text;
+            background-clip: text;
+            text-shadow: 0 0 20px rgba(255, 0, 212, 0.5);
         }
 
         @keyframes pulse {
@@ -209,23 +430,16 @@
             box-shadow: var(--glow-blue);
         }
 
-        /* Footer */
-        footer {
-            text-align: center;
-            padding: 2rem 5%;
-            color: var(--text-gray);
-            font-size: 0.9rem;
-            border-top: 1px solid rgba(0, 247, 255, 0.1);
-        }
-
-        .footer-logo {
-            color: var(--accent-electric);
-            font-weight: 700;
-            font-size: 1.2rem;
-            margin-bottom: 0.5rem;
-        }
-
+        /* Responsive adjustments */
         @media (max-width: 992px) {
+            .hero h1 {
+                font-size: 2.8rem;
+            }
+
+            .nav-links {
+                gap: 1rem;
+            }
+
             .coming-soon-text {
                 font-size: 4rem;
             }
@@ -245,6 +459,29 @@
                 width: 100%;
                 justify-content: center;
                 flex-wrap: wrap;
+            }
+
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+
+            .hero p {
+                font-size: 1.1rem;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .btn {
+                width: 100%;
+                max-width: 300px;
+                justify-content: center;
+            }
+
+            .projects-grid {
+                grid-template-columns: 1fr;
             }
 
             .coming-soon-text {
@@ -273,41 +510,84 @@
         </a>
         <div class="nav-links">
             <a href="index.html" class="nav-item">Home</a>
-            <a href="index.html#projects" class="nav-item">Projects</a>
+            <a href="#projects" class="nav-item">Projects</a>
             <a href="open-domotics.html" class="nav-item">Open Domotics</a>
             <a href="illumination-system.html" class="nav-item">Sigi Custom Illumination</a>
             <a href="sigi-ai.html" class="nav-item ai-highlight">Sigi AI</a>
         </div>
     </nav>
 
-    <!-- Project Page Content -->
-    <div class="project-page">
-        <div class="project-header">
-            <div class="project-logo">
-                <i class="fas fa-home"></i>
+    <!-- Main Content - This will be replaced by project pages -->
+    <main id="main-content">
+        <!-- Hero Section -->
+        <section class="hero" id="home">
+            <h1>Open Source Technology for Your Home</h1>
+            <p>We are SiGi Technologies, an open source organization dedicated to bringing cutting-edge technology into your homes. Our mission is to create accessible, innovative solutions that empower everyone to experience the future today.</p>
+            <div class="cta-buttons">
+                <a href="#projects" class="btn btn-primary">
+                    <i class="fas fa-rocket"></i> Explore Projects
+                </a>
+                <a href="https://github.com/Sigi-technonogies" target="_blank" class="btn btn-secondary">
+                    <i class="fab fa-github"></i> View on GitHub
+                </a>
             </div>
-            <h1 class="project-name">Open Domotics</h1>
-        </div>
-        
-        <div class="coming-soon-text">Coming 2026</div>
-        
-        <p class="project-description">
-            Open Domotics is our flagship home automation platform that redefines smart living. 
-            Built on open-source principles, it offers complete control over every aspect of your home - 
-            from lighting and climate to security and entertainment systems. 
-            With seamless integration and customizable automation, Open Domotics brings the future of living to your doorstep.
-        </p>
-        
-        <a href="index.html" class="back-to-home">
-            <i class="fas fa-arrow-left"></i> Back to Home
-        </a>
-    </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section class="projects" id="projects">
+            <h2 class="section-title">Our Projects</h2>
+            <div class="projects-grid">
+                <!-- Project 1 - Open Domotics -->
+                <a href="open-domotics.html" class="project-card">
+                    <div class="project-icon">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <h3 class="project-title">Open Domotics</h3>
+                    <p class="project-desc">Revolutionary open source home automation system that brings seamless control and integration to every aspect of your smart home.</p>
+                    <div class="coming-soon">Click to learn more</div>
+                </a>
+
+                <!-- Project 2 - Custom Illumination -->
+                <a href="illumination-system.html" class="project-card">
+                    <div class="project-icon">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <h3 class="project-title">Sigi Custom Illumination System</h3>
+                    <p class="project-desc">Advanced lighting control system with customizable patterns, colors, and intelligent automation for any environment.</p>
+                    <div class="coming-soon">Click to learn more</div>
+                </a>
+
+                <!-- Project 3 - Sigi AI -->
+                <a href="sigi-ai.html" class="project-card ai-card">
+                    <div class="project-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3 class="project-title">Sigi AI</h3>
+                    <p class="project-desc">Intelligent assistant powered by advanced machine learning algorithms, designed to adapt and learn from your home environment.</p>
+                    <div class="coming-soon">Click to learn more</div>
+                </a>
+            </div>
+        </section>
+
+        <!-- Company Info -->
+        <section class="company-info">
+            <p>We are SiGi Technologies, we are an open source organization, and our goal is to bring technology in your homes. Through community collaboration and transparent development, we're building the future of home technology.</p>
+            <div class="social-links">
+                <a href="https://www.youtube.com/@SiGi.official" target="_blank" class="social-link">
+                    <i class="fab fa-youtube"></i> YouTube Channel
+                </a>
+                <a href="https://github.com/Sigi-technonogies" target="_blank" class="social-link">
+                    <i class="fab fa-github"></i> GitHub Repository
+                </a>
+            </div>
+        </section>
+    </main>
 
     <!-- Footer -->
     <footer>
         <div class="footer-logo">SiGi Technologies</div>
         <p>Open Source Innovation for Tomorrow's Homes | © 2025 SiGi Technologies. All open source projects.</p>
-        <p style="margin-top: 10px; font-size: 0.8rem;">Open Domotics - Coming 2026</p>
+        <p style="margin-top: 10px; font-size: 0.8rem;">All projects coming in 2026</p>
     </footer>
 
     <script>
@@ -351,8 +631,46 @@
             }
         }
 
-        // Initialize when DOM is loaded
-        document.addEventListener('DOMContentLoaded', createParticles);
+        // Smooth scroll for navigation links
+        function setupSmoothScroll() {
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    const href = this.getAttribute('href');
+                    
+                    // Skip if it's not an anchor link
+                    if (href === '#' || href.startsWith('#')) {
+                        e.preventDefault();
+                        
+                        const targetElement = document.querySelector(href);
+                        if (targetElement) {
+                            window.scrollTo({
+                                top: targetElement.offsetTop - 100,
+                                behavior: 'smooth'
+                            });
+                        }
+                    }
+                });
+            });
+        }
+
+        // Initialize everything when DOM is loaded
+        document.addEventListener('DOMContentLoaded', () => {
+            createParticles();
+            setupSmoothScroll();
+            
+            // Add a subtle hover effect to all project cards on page load
+            setTimeout(() => {
+                const cards = document.querySelectorAll('.project-card');
+                cards.forEach((card, index) => {
+                    setTimeout(() => {
+                        card.style.transform = 'translateY(-5px)';
+                        setTimeout(() => {
+                            card.style.transform = '';
+                        }, 300);
+                    }, index * 200);
+                });
+            }, 500);
+        });
     </script>
 </body>
 </html>
